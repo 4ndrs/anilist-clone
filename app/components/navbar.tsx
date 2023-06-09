@@ -1,7 +1,10 @@
 "use client";
 
 import { useState } from "react";
+
+import Image from "next/image";
 import Link from "next/link";
+import Logo from "../assets/logo.svg";
 
 import HamburgerSVG from "./hamburger-svg";
 import CommentsSVG from "./comments-svg";
@@ -30,7 +33,7 @@ const Navbar = () => {
         <menu
           className={`${
             showMenu ? "grid" : "hidden"
-          } h-[9.4rem] w-[13.13rem] grid-cols-3 place-items-center rounded-md bg-white p-2 text-xs font-bold text-slate-400 drop-shadow-2xl lg:mx-auto lg:flex lg:h-[4.25rem] lg:w-auto lg:max-w-5xl lg:justify-center lg:bg-transparent lg:text-sm lg:capitalize lg:drop-shadow-none`}
+          } relative h-[9.4rem] w-[13.13rem] grid-cols-3 place-items-center rounded-md bg-white p-2 text-xs font-bold text-slate-400 drop-shadow-2xl lg:mx-auto lg:flex lg:h-[4.25rem] lg:w-auto lg:max-w-5xl lg:justify-center lg:bg-transparent lg:text-sm lg:capitalize lg:drop-shadow-none`}
         >
           {[
             { name: "forum", icon: CommentsSVG, href: "#" },
@@ -57,6 +60,11 @@ const Navbar = () => {
             <button aria-label="close menu" onClick={() => setShowMenu(false)}>
               <CloseSVG className="h-6 w-6" />
             </button>
+          </li>
+          <li className="absolute left-0 top-1/2 order-none hidden -translate-y-1/2 px-3 lg:block">
+            <Link aria-label="home page" href="/">
+              <Image alt="anilist logo" src={Logo} width={50} height={50} />
+            </Link>
           </li>
         </menu>
       </nav>
