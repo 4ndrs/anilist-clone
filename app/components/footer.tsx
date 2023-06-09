@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 const Footer = () => (
-  <footer className="mt-5 bg-slate-900 p-[1.9rem] text-slate-300">
+  <footer className="mt-5 bg-slate-900 p-[1.9rem] text-slate-400">
     <div>
-      <h1 className="mb-3">Site Theme</h1>
+      <h1 className="mb-3 font-bold text-sky-400">Site Theme</h1>
       <ul className="flex gap-3">
         <li>
           <button>Default</button>
@@ -17,7 +17,7 @@ const Footer = () => (
       </ul>
     </div>
 
-    <div className="mt-7 flex flex-col gap-7 [&_a:hover]:text-sky-400 [&_a]:block [&_a]:p-1.5 [&_menu]:flex [&_menu]:flex-col">
+    <div className="mt-7 flex flex-col gap-7 [&_a:hover]:text-sky-400 [&_a]:block [&_a]:p-1.5 [&_a]:text-[0.94rem] [&_a]:font-semibold [&_a]:leading-[1.1rem] [&_menu]:flex [&_menu]:flex-col">
       <menu>
         <li>
           <Link href="#">Donate</Link>
