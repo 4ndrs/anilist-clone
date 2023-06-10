@@ -1,8 +1,10 @@
 import Link from "next/link";
 import ThemeSwitcher from "./theme-switcher";
 
-const Footer = () => (
-  <footer className="mt-5 bg-slate-900 p-[1.9rem] text-slate-400">
+const Footer = ({ className }: { className?: string }) => (
+  <footer
+    className={className + " mt-5 bg-slate-900 p-[1.9rem] text-slate-400"}
+  >
     <ThemeSwitcher />
 
     <div className="mt-7 flex flex-col gap-7 [&_a:hover]:text-sky-400 [&_a]:block [&_a]:p-1.5 [&_a]:text-[0.94rem] [&_a]:font-semibold [&_a]:leading-[1.1rem] [&_menu]:flex [&_menu]:flex-col">

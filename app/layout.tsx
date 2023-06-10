@@ -20,12 +20,12 @@ export default function RootLayout({
       <body
         className={
           inter.className +
-          " bg-slate-200 text-slate-900 dark:bg-slate-800 dark:text-slate-200"
+          " flex min-h-screen flex-col bg-slate-200 text-slate-900 dark:bg-slate-800 dark:text-slate-200"
         }
       >
         <Navbar />
         {children}
-        <Footer />
+        <Footer className="mt-auto" />
       </body>
     </html>
   );
