@@ -18,7 +18,7 @@ const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <header className="fixed bottom-6 right-5 lg:sticky lg:inset-x-0 lg:top-0 lg:bg-blue-950">
+    <header className="fixed bottom-6 right-5 z-20 lg:sticky lg:inset-x-0 lg:top-0 lg:bg-blue-950">
       <button
         aria-label="open menu"
         onClick={() => setShowMenu(true)}
