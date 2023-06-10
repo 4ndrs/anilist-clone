@@ -3,11 +3,14 @@ import ThemeSwitcher from "./theme-switcher";
 
 const Footer = ({ className }: { className?: string }) => (
   <footer
-    className={className + " mt-5 bg-slate-900 p-[1.9rem] text-slate-400"}
+    className={
+      className +
+      " mt-5 bg-slate-900 p-[1.9rem] text-slate-400 lg:flex lg:justify-center lg:px-[1.88rem] lg:py-[3.13rem]"
+    }
   >
     <ThemeSwitcher />
 
-    <div className="mt-7 flex flex-col gap-7 [&_a:hover]:text-sky-400 [&_a]:block [&_a]:p-1.5 [&_a]:text-[0.94rem] [&_a]:font-semibold [&_a]:leading-[1.1rem] [&_menu]:flex [&_menu]:flex-col">
+    <div className="mt-7 flex flex-col gap-7 lg:ml-[6rem] lg:mt-0 lg:flex-row lg:gap-14 [&_a:hover]:text-sky-400 [&_a]:block [&_a]:p-1.5 [&_a]:text-[0.94rem] [&_a]:font-semibold [&_a]:leading-[1.1rem] lg:[&_a]:p-[0.63rem] [&_menu]:flex [&_menu]:flex-col">
       <menu>
         <li>
           <Link href="#">Donate</Link>
