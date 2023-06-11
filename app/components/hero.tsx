@@ -34,7 +34,7 @@ const features = [
 ];
 
 const Hero = () => (
-  <section className="mb-[4.4rem] w-full bg-slate-900 px-10 pb-[1.9rem] pt-[4.4rem] text-slate-100">
+  <section className="mb-[4.4rem] w-full bg-slate-900 px-[1.88rem] py-[4.38rem] text-slate-100">
     <h1 className="mb-5 text-center text-[2rem] font-bold leading-[2.6rem]">
       The next-generation anime platform
     </h1>
