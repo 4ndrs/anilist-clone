@@ -42,7 +42,7 @@ const Hero = () => (
       Track, share, and discover your favorite anime and manga with AniList.
     </p>
 
-    <ul className="mx-auto mb-[5.63rem] mt-[4.4rem] grid max-w-lg grid-flow-row gap-y-[3.2rem]">
+    <ul className="mx-auto mb-[5.63rem] mt-[4.4rem] grid max-w-lg grid-flow-row gap-y-[3.2rem] md:max-w-4xl md:grid-cols-2 md:gap-x-[3.75rem] md:gap-y-[4.38rem]">
       {features.map((feature) => (
         <li
           key={feature.title}
