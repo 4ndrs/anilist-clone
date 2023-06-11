@@ -46,7 +46,7 @@ const Hero = () => (
       {features.map((feature) => (
         <li
           key={feature.title}
-          className="grid grid-flow-col grid-rows-[min-content_min-content] gap-x-12"
+          className="grid grid-flow-col grid-rows-[min-content_min-content] gap-x-10"
         >
           <Image
             alt=""
