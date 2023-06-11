@@ -34,7 +34,7 @@ const features = [
 ];
 
 const Hero = () => (
-  <section className="relative mb-[4.4rem] w-full bg-slate-900 px-[1.88rem] py-[4.38rem] text-slate-100">
+  <section className="relative mb-[4.4rem] w-full bg-slate-900 px-[1.88rem] py-[4.38rem] text-slate-100 lg:mx-auto lg:mt-[3.13rem] lg:max-w-[68.75rem] lg:rounded-[1.25rem] lg:px-20 lg:py-[3.75rem]">
     <h1 className="mb-5 text-center text-[2rem] font-bold leading-[2.6rem]">
       The next-generation anime platform
     </h1>
@@ -42,7 +42,7 @@ const Hero = () => (
       Track, share, and discover your favorite anime and manga with AniList.
     </p>
 
-    <ul className="mx-auto mb-[5.63rem] mt-[4.4rem] grid max-w-lg grid-flow-row gap-y-[3.2rem] md:max-w-4xl md:grid-cols-2 md:gap-x-[3.75rem] md:gap-y-[4.38rem]">
+    <ul className="mx-auto mb-[5.63rem] mt-[4.4rem] grid max-w-lg grid-flow-row gap-y-[3.2rem] md:max-w-4xl md:grid-cols-2 md:gap-x-[3.75rem] md:gap-y-[4.38rem] lg:mt-[5.313rem]">
       {features.map((feature) => (
         <li
           key={feature.title}
