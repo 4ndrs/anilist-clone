@@ -24,7 +24,7 @@ const Navbar = () => {
         onClick={() => setShowMenu(true)}
         className={`${
           showMenu ? "hidden" : "block"
-        } h-[3.13rem] w-[3.13rem] rounded-md bg-white drop-shadow-2xl lg:hidden`}
+        } h-[3.13rem] w-[3.13rem] rounded-md bg-white drop-shadow-2xl dark:bg-slate-800 lg:hidden`}
       >
         <HamburgerSVG className="mx-auto h-8 w-10 fill-sky-400" />
       </button>
@@ -33,7 +33,7 @@ const Navbar = () => {
         <menu
           className={`${
             showMenu ? "grid" : "hidden"
-          } relative h-[9.4rem] w-[13.13rem] grid-cols-3 place-items-center rounded-md bg-white p-2 text-xs font-bold text-slate-400 drop-shadow-2xl lg:mx-auto lg:flex lg:h-[4.25rem] lg:w-auto lg:max-w-5xl lg:justify-center lg:bg-transparent lg:text-sm lg:capitalize lg:drop-shadow-none`}
+          } relative h-[9.4rem] w-[13.13rem] grid-cols-3 place-items-center rounded-md bg-white p-2 text-xs font-bold text-slate-400 drop-shadow-2xl dark:bg-slate-800 lg:mx-auto lg:flex lg:h-[4.25rem] lg:w-auto lg:max-w-5xl lg:justify-center lg:bg-transparent lg:text-sm lg:capitalize lg:drop-shadow-none`}
         >
           {[
             { name: "forum", icon: CommentsSVG, href: "#" },
