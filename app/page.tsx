@@ -1,3 +1,9 @@
-const Home = () => <main>hello world</main>;
+import Hero from "./components/hero";
+
+const Home = () => (
+  <main>
+    <Hero />
+  </main>
+);
 
 export default Home;
