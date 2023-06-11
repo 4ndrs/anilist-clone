@@ -69,7 +69,7 @@ const Hero = () => (
       className="absolute bottom-0 right-1/2 flex h-[3.07rem] w-[12.5rem] translate-x-1/2 translate-y-1/2 items-center justify-center rounded-full bg-blue-500 shadow-xl shadow-slate-400 transition-shadow duration-300 hover:shadow-2xl hover:shadow-sky-600 dark:shadow-transparent dark:hover:shadow-sky-600"
     >
       <span className="text-[1.125rem] font-extrabold">Join Now</span>
-      <div className="absolute right-2 flex h-9 w-9 items-center justify-center rounded-full bg-gray-300">
+      <div className="absolute right-2 flex h-9 w-9 items-center justify-center rounded-full bg-sky-100">
         <svg aria-hidden viewBox="0 0 320 512" className="w-3 text-blue-500">
           <path
             fill="currentColor"
