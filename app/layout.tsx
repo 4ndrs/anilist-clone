@@ -1,9 +1,9 @@
 import Footer from "./components/footer";
 import Navbar from "./components/navbar";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Overpass } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const overpass = Overpass({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={
-          inter.className +
+          overpass.className +
           " flex min-h-screen flex-col bg-slate-200 text-slate-900 dark:bg-slate-800 dark:text-slate-200"
         }
       >
