@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -17,8 +17,35 @@ import CloseSVG from "./close-svg";
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
 
+  const headerRef = useRef<HTMLElement>(null);
+  const hiddenRef = useRef<boolean>(false);
+  const previousScrollPos = useRef<number>(0);
+
+  useEffect(() => {
+    previousScrollPos.current = scrollY;
+
+    const handleScroll = () => {
+      if (scrollY > previousScrollPos.current && !hiddenRef.current) {
+        headerRef.current?.classList.add("lg:-translate-y-full");
+        hiddenRef.current = true;
+      } else if (scrollY < previousScrollPos.current && hiddenRef.current) {
+        headerRef.current?.classList.remove("lg:-translate-y-full");
+        hiddenRef.current = false;
+      }
+
+      previousScrollPos.current = scrollY;
+    };
+
+    document.addEventListener("scroll", handleScroll);
+
+    return () => document.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="fixed bottom-6 right-5 z-20 lg:sticky lg:inset-x-0 lg:top-0 lg:bg-blue-950">
+    <header
+      ref={headerRef}
+      className="fixed bottom-6 right-5 z-20 lg:sticky lg:inset-x-0 lg:top-0 lg:bg-blue-950 lg:transition-transform lg:duration-500"
+    >
       <button
         aria-label="open menu"
         onClick={() => setShowMenu(true)}
