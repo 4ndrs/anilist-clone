@@ -59,7 +59,7 @@ const Navbar = () => {
       <nav>
         <menu
           className={`${
-            showMenu ? "grid" : "hidden"
+            showMenu ? "grid animate-fadeIn" : "hidden"
           } relative h-[9.4rem] w-[13.13rem] grid-cols-3 place-items-center rounded-md bg-white p-2 text-xs font-bold text-slate-400 drop-shadow-2xl dark:bg-slate-800 lg:mx-auto lg:flex lg:h-[4.25rem] lg:w-auto lg:max-w-5xl lg:justify-center lg:bg-transparent lg:text-sm lg:capitalize lg:drop-shadow-none dark:lg:bg-transparent`}
         >
           {[
