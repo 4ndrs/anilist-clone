@@ -19,6 +19,7 @@ module.exports = {
       colors: {
         nav: {
           1: "#2b2d42",
+          2: "#bcbedc",
         },
       },
     },

@@ -44,7 +44,7 @@ const Navbar = () => {
   return (
     <header
       ref={headerRef}
-      className="fixed bottom-6 right-5 z-20 lg:sticky lg:inset-x-0 lg:top-0 lg:bg-nav-1 lg:transition-transform lg:duration-500"
+      className="fixed bottom-6 right-5 z-20 lg:sticky lg:inset-x-0 lg:top-0 lg:bg-nav-1  lg:transition-transform lg:duration-500"
     >
       <button
         aria-label="open menu"
@@ -60,7 +60,7 @@ const Navbar = () => {
         <menu
           className={`${
             showMenu ? "grid animate-fadeIn" : "hidden"
-          } relative h-[9.4rem] w-[13.13rem] grid-cols-3 place-items-center rounded-md bg-white p-2 text-xs font-bold text-slate-400 drop-shadow-2xl dark:bg-slate-800 lg:mx-auto lg:flex lg:h-[4.25rem] lg:w-auto lg:max-w-5xl lg:justify-center lg:bg-transparent lg:text-sm lg:capitalize lg:drop-shadow-none dark:lg:bg-transparent`}
+          } relative h-[9.4rem] w-[13.13rem] grid-cols-3 place-items-center rounded-md bg-white p-2 text-xs font-bold text-slate-400 drop-shadow-2xl dark:bg-slate-800 lg:mx-auto lg:flex lg:h-[4.25rem] lg:w-auto lg:max-w-5xl lg:justify-center lg:bg-transparent lg:text-sm lg:capitalize lg:text-nav-2 lg:drop-shadow-none dark:lg:bg-transparent`}
         >
           {[
             { name: "forum", icon: CommentsSVG, href: "#" },
