@@ -44,7 +44,7 @@ const Navbar = () => {
   return (
     <header
       ref={headerRef}
-      className="fixed bottom-6 right-5 z-20 lg:sticky lg:inset-x-0 lg:top-0 lg:bg-blue-950 lg:transition-transform lg:duration-500"
+      className="fixed bottom-6 right-5 z-20 lg:sticky lg:inset-x-0 lg:top-0 lg:bg-nav-1 lg:transition-transform lg:duration-500"
     >
       <button
         aria-label="open menu"

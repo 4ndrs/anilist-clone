@@ -16,6 +16,11 @@ module.exports = {
           "100%": { opacity: "1", transform: "scale(1.0)" },
         },
       },
+      colors: {
+        nav: {
+          1: "#2b2d42",
+        },
+      },
     },
   },
   plugins: [],
