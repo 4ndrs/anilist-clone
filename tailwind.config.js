@@ -22,6 +22,9 @@ module.exports = {
           2: "#bcbedc",
         },
       },
+      boxShadow: {
+        blueGlow: "0 2px 10px rgb(8 150 230 / 60%)",
+      },
     },
   },
   plugins: [],

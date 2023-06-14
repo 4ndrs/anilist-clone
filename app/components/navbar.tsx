@@ -76,7 +76,7 @@ const Navbar = () => {
               <Link
                 href={link.href}
                 /* TODO: add custom shadow to tailwind.config.js */
-                className="group flex flex-col items-center gap-2 lg:px-4 lg:py-[1.13rem] lg:transition-colors lg:hover:text-slate-300 lg:group-[:nth-child(4)]:rounded-md lg:group-[:nth-child(4)]:bg-blue-600 lg:group-[:nth-child(4)]:px-[0.94rem] lg:group-[:nth-child(4)]:py-[0.63rem] lg:group-[:nth-child(4)]:text-white lg:group-[:nth-child(4)]:transition-transform  lg:group-[:nth-child(4)]:duration-500 lg:group-[:nth-child(4)]:hover:scale-105 lg:group-[:nth-child(4)]:hover:shadow-2xl lg:group-[:nth-child(4)]:hover:shadow-blue-500"
+                className="group flex flex-col items-center gap-2 lg:px-4 lg:py-[1.13rem] lg:transition-colors lg:hover:text-slate-300 lg:group-[:nth-child(4)]:rounded-md lg:group-[:nth-child(4)]:bg-blue-600 lg:group-[:nth-child(4)]:px-[0.94rem] lg:group-[:nth-child(4)]:py-[0.63rem] lg:group-[:nth-child(4)]:text-white lg:group-[:nth-child(4)]:transition-all lg:group-[:nth-child(4)]:duration-500 lg:group-[:nth-child(4)]:hover:scale-105 lg:group-[:nth-child(4)]:hover:shadow-blueGlow"
               >
                 <link.icon className="h-6 w-6 group-hover:fill-sky-400 lg:hidden" />
                 {link.name}
