@@ -24,6 +24,7 @@ module.exports = {
       },
       boxShadow: {
         blueGlow: "0 2px 10px rgb(8 150 230 / 60%)",
+        blueGlow2: "0 2px 43px rgb(8 150 230 / 60%)",
       },
     },
   },
