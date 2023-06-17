@@ -65,7 +65,7 @@ const Hero = () => (
 
     <Link
       href="#"
-      className="absolute bottom-0 right-1/2 flex h-[3.07rem] w-[12.5rem] translate-x-1/2 translate-y-1/2 items-center justify-center rounded-full bg-blue-500 shadow-xl shadow-slate-400 transition-shadow duration-300 hover:shadow-blueGlow2"
+      className="absolute bottom-0 right-1/2 flex h-[3.07rem] w-[12.5rem] translate-x-1/2 translate-y-1/2 items-center justify-center rounded-full bg-blue-500 shadow-[0_2px_40px_rgb(0_0_0_/40%)] transition-shadow duration-300 hover:shadow-blueGlow2"
     >
       <span className="text-[1.125rem] font-extrabold">Join Now</span>
       <div className="absolute right-2 flex h-9 w-9 items-center justify-center rounded-full bg-sky-100">
