@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+
 /**
  * key: value
  * value: label
@@ -7,28 +11,71 @@ interface Options {
   [key: string | number]: string | number;
 }
 
-interface Props<T extends Options, U extends keyof T> {
-  onChange: (value: U) => void;
-  defaultValue: U;
+interface Props<T extends Options> {
+  onChange: (value: keyof T) => void;
+  defaultValue: keyof T;
   options: T;
 }
 
-const Select = <
-  T extends Options,
-  U extends Extract<keyof T, string | number>
->({
+const Select = <T extends Options>({
   options,
   defaultValue,
-}: Props<T, U>) => (
-  <div className="flex cursor-pointer content-between items-center rounded-md bg-slate-300 px-3 pb-[0.19rem] pt-[0.44rem] text-inherit dark:bg-slate-700">
-    {options[defaultValue]}
-    <ChevronSVG
-      width="17.5px"
-      height="20px"
-      className="ml-[0.63rem] text-slate-400 dark:text-slate-500"
-    />
-  </div>
-);
+  onChange,
+}: Props<T>) => {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div
+      onClick={() => setOpen(true)}
+      className="relative flex cursor-pointer select-none content-between items-center rounded-md bg-slate-300 px-3 pb-[0.19rem] pt-[0.44rem] text-inherit dark:bg-slate-700"
+    >
+      {options[defaultValue]}
+      <ChevronSVG
+        width="17.5px"
+        height="20px"
+        className="ml-[0.63rem] text-slate-400 dark:text-slate-500"
+      />
+
+      {/* backdrop */}
+      <div
+        onClick={(event) => {
+          event.stopPropagation();
+          setOpen(false);
+        }}
+        className={`${
+          open ? "block" : "hidden"
+        } fixed inset-0 z-50 cursor-auto bg-transparent`}
+      />
+
+      <ul
+        className={`${
+          open ? "block" : "hidden"
+        } absolute -bottom-2 left-0 z-[999] flex w-[10.94rem] translate-y-full flex-col rounded-md bg-white px-[1.13rem] py-[0.563rem] text-slate-500 shadow-[0_14px_30px_rgba(103,132,187,.15),0_4px_4px_rgba(103,132,187,.05)] dark:bg-slate-700 dark:text-slate-400 dark:shadow-none`}
+      >
+        {Object.entries(options).map(([value, label]) => {
+          if (value === defaultValue) {
+            return;
+          }
+
+          return (
+            <li key={value} className="text-lg">
+              <button
+                onClick={(event) => {
+                  event.stopPropagation();
+                  setOpen(false);
+                  onChange(value);
+                }}
+                className="w-full py-[0.563rem] text-left hover:text-sky-400"
+              >
+                {label}
+              </button>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
+};
 
 const ChevronSVG = (props: React.SVGProps<SVGSVGElement>) => (
   <svg aria-hidden viewBox="0 0 448 512" fill="currentColor" {...props}>
