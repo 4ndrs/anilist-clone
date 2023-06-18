@@ -20,7 +20,7 @@ const ThemeSwitcher = () => {
   };
 
   return (
-    <div>
+    <div className="select-none">
       <h1 className="mb-3 font-bold text-sky-400">Site Theme</h1>
       <ul className="flex gap-5">
         <li>
