@@ -56,7 +56,7 @@ const Select = <T extends Options>({
           }
         }}
         className={`${open ? "block" : "hidden"} ${
-          closing ? "animate-fadeOut" : "animate-slideDown"
+          closing ? "animate-fade-out" : "animate-slide-down"
         } absolute left-0 top-[calc(100%_+_0.5rem)] z-[999] flex w-[10.94rem] flex-col rounded-md bg-white px-[1.13rem] py-[0.563rem] text-slate-500 shadow-[0_14px_30px_rgba(103,132,187,.15),0_4px_4px_rgba(103,132,187,.05)] dark:bg-slate-700 dark:text-slate-400 dark:shadow-none`}
       >
         {Object.entries(options).map(([value, label]) => {

@@ -59,7 +59,7 @@ const Navbar = () => {
       <nav>
         <menu
           className={`${
-            showMenu ? "grid animate-fadeIn" : "hidden"
+            showMenu ? "grid animate-fade-in" : "hidden"
           } relative h-[9.4rem] w-[13.13rem] grid-cols-3 place-items-center rounded-md bg-white p-2 text-xs font-bold text-slate-400 drop-shadow-2xl dark:bg-slate-800 lg:mx-auto lg:flex lg:h-[4.25rem] lg:w-auto lg:max-w-5xl lg:justify-center lg:bg-transparent lg:text-sm lg:capitalize lg:text-nav-2 lg:drop-shadow-none dark:lg:bg-transparent`}
         >
           {[
@@ -75,7 +75,7 @@ const Navbar = () => {
             >
               <Link
                 href={link.href}
-                className="group flex flex-col items-center gap-2 ease-in-out lg:px-4 lg:py-[1.13rem] lg:transition-colors lg:hover:text-slate-300 lg:group-[:nth-child(4)]:rounded-md lg:group-[:nth-child(4)]:bg-blue-600 lg:group-[:nth-child(4)]:px-[0.94rem] lg:group-[:nth-child(4)]:py-[0.63rem] lg:group-[:nth-child(4)]:text-white lg:group-[:nth-child(4)]:transition-[box-shadow,_scale] lg:group-[:nth-child(4)]:[transition:box-shadow_600ms,_transform_200ms] lg:group-[:nth-child(4)]:hover:scale-[1.03] lg:group-[:nth-child(4)]:hover:shadow-blueGlow"
+                className="group flex flex-col items-center gap-2 ease-in-out lg:px-4 lg:py-[1.13rem] lg:transition-colors lg:hover:text-slate-300 lg:group-[:nth-child(4)]:rounded-md lg:group-[:nth-child(4)]:bg-blue-600 lg:group-[:nth-child(4)]:px-[0.94rem] lg:group-[:nth-child(4)]:py-[0.63rem] lg:group-[:nth-child(4)]:text-white lg:group-[:nth-child(4)]:transition-[box-shadow,_scale] lg:group-[:nth-child(4)]:[transition:box-shadow_600ms,_transform_200ms] lg:group-[:nth-child(4)]:hover:scale-[1.03] lg:group-[:nth-child(4)]:hover:shadow-blue-glow"
               >
                 <link.icon className="h-6 w-6 group-hover:fill-sky-400 lg:hidden" />
                 {link.name}
