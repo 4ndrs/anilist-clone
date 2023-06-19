@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       animation: {
         fadeIn: "fadeIn 200ms ease-in-out",
+        fadeOut: "fadeOut 200ms ease-in-out forwards",
         slideDown: "slideDown 200ms ease-out",
       },
       keyframes: {
@@ -19,6 +20,10 @@ module.exports = {
         slideDown: {
           "0%": { opacity: "0", transform: "translateY(-0.3rem)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        fadeOut: {
+          "0%": { opacity: "1" },
+          "100%": { opacity: "0" },
         },
       },
       colors: {
