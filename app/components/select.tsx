@@ -65,7 +65,7 @@ const Select = <T extends Options>({
                   setOpen(false);
                   onChange(value);
                 }}
-                className="w-full py-[0.563rem] text-left hover:text-sky-400"
+                className="w-full py-[0.563rem] text-left hover:text-sky-400 focus-visible:text-sky-400 focus-visible:outline-none"
               >
                 {label}
               </button>
